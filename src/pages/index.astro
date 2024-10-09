@@ -38,17 +38,3 @@ import Layout from "../components/Layout.astro"
     </form>
   </div>
 </Layout>
-
-<script>
-  document.querySelectorAll('input[type="text"], input[type="email"], textarea').forEach((input) => {
-    input.addEventListener("focus", (e) => {
-      ;(e.target as HTMLElement).removeAttribute("placeholder")
-    })
-    input.addEventListener("blur", (e) => {
-      ;(e.target as HTMLElement).setAttribute(
-        "placeholder",
-        (e.target as HTMLElement).getAttribute("placeholder") || ""
-      )
-    })
-  })
-</script>
