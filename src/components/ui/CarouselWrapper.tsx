@@ -1,5 +1,5 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Fade from "embla-carousel-auto-scroll";
+import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
 
@@ -14,7 +14,7 @@ const InteractiveCarousel = () => {
   return (
     <Carousel
       className="mb-12"
-      plugins={[Fade(), Autoplay({ delay: 3000, stopOnFocusIn: false, stopOnInteraction: false })]}
+      plugins={[Fade(), Autoplay({ delay: 3000, stopOnFocusIn: true, stopOnInteraction: false })]}
     >
       <CarouselContent>
         {images.map((image, index) => (
