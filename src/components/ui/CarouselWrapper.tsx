@@ -10,7 +10,7 @@ interface InteractiveCarouselProps {
 
 const InteractiveCarousel: React.FC<InteractiveCarouselProps> = ({ fade, arrows }) => {
   const [images, setImages] = useState<string[]>([]);
-  const plugins = fade ? [Fade(), Autoplay({ delay: 5000 })] : [Autoplay({ delay: 3000 })];
+  const plugins = fade ? [Fade(), Autoplay({ delay: 5000 })] : [];
 
   useEffect(() => {
     const imagePaths = Array.from({ length: 12 }, (_, i) => `/images/${i + 1}.jpg`);
@@ -28,8 +28,14 @@ const InteractiveCarousel: React.FC<InteractiveCarouselProps> = ({ fade, arrows 
       </CarouselContent>
       {arrows && (
         <>
-          <CarouselPrevious className="bg-transparent text-white/70" variant={"outline"} />
-          <CarouselNext className="bg-transparent text-white/70" variant={"outline"} />
+          <CarouselPrevious
+            className="bg-transparent text-white/90 hover:text-white hover:bg-transparent"
+            variant={"ghost"}
+          />
+          <CarouselNext
+            className="bg-transparent text-white/90 hover:text-white hover:bg-transparent"
+            variant={"ghost"}
+          />
         </>
       )}
     </Carousel>
