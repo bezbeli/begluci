@@ -1,0 +1,22 @@
+<div class="mx-auto max-w-xl flex flex-col gap-4 my-12">
+  <form action="/actions/send-custom-email" method="post">
+    <label for="send-email__recipient">For:</label>
+    <input placeholder="Email" type="email" name="recipient" id="send-email__recipient" required />
+
+    <label for="send-email__name">Full name:</label>
+    <input placeholder="Full name" type="text" name="name" id="send-email__name" required />
+
+    <label for="send-email__location">Location:</label>
+    <input placeholder="Location" type="text" name="location" id="send-email__location" required />
+
+    <label for="send-email__message">Message:</label>
+    <textarea placeholder="Message" name="message" id="send-email__message" required></textarea>
+
+    <label class="flex items-center justify-center text-left gap-2 leading-tight text-xs" for="send-email__consent">
+      <input type="checkbox" name="consent" id="send-email__consent" required />
+      I agree www.begluci.ba will process my personal data for relationship records
+    </label>
+
+    <input type="submit" value="Send" />
+  </form>
+</div>

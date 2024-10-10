@@ -1,29 +1,74 @@
 ---
+import ContactForm from "@/components/ContactForm.astro"
 import Layout from "@/components/Layout.astro"
 import CarouselWrapper from "@/components/ui/CarouselWrapper.tsx"
 ---
 
 <Layout>
-  <h1>Begluci.ba</h1>
+  <section id="about">
+    <p>
+      The Kiraethana Mosque complex (Beglučka Džamija) is located in the sparsely populated village of Begluci, Bosnia
+      and Herzegovina. The mosque was built on the site of a previous mosque that had stood for nearly 200 years before
+      being destroyed during the war of 1992-1995. Today, the mosque complex serves as a gathering place for the
+      community, not only for prayer but also for community events. The complex also aims to welcome guests from the
+      Bosnian diaspora, encouraging them to contribute to the growing Kiraethana collection.
+    </p>
+  </section>
 
-  <CarouselWrapper client:load />
+  <section id="facilities">
+    <p>
+      The complex includes the Kiraethana Mosque, an Ablution pavilion, and the Riverside pavilion along the Ukrina
+      River. The mosque covers a net area of 176.30 square meters. As a programmatic add-on, apart from an apartment for
+      contributing guests, architects have incorporated a Kiraethana—a library and reading space—addressing the region's
+      lack of modern library facilities. Therefore, the Surah "Iqra Bismi Rabbika" ("Read! In the Name of Your Lord") is
+      featured in three forms: as a short inscription in stone above the entrance, as an expanded version upon entry,
+      and as the full Surah crowning the prayer hall.
+    </p>
+  </section>
 
-  <div class="mx-auto max-w-lg flex flex-col gap-4">
-    <form action="/actions/send-custom-email" method="post">
-      <h2>Kontakt</h2>
-      <div>
-        <label for="send-email__recipient">Za:</label>
-        <input placeholder="Email" type="email" name="recipient" id="send-email__recipient" required />
-      </div>
-      <div>
-        <label for="send-email__subject">Naslov:</label>
-        <input placeholder="Naslov" type="text" name="subject" id="send-email__subject" required />
-      </div>
-      <div>
-        <label for="send-email__message">Poruka:</label>
-        <textarea placeholder="Poruka" name="message" id="send-email__message" required></textarea>
-      </div>
-      <input type="submit" value="Pošalji" />
-    </form>
-  </div>
+  <section id="gallery">
+    <CarouselWrapper client:load />
+  </section>
+
+  <section id="vision">
+    <p>
+      Beyond merely rebuilding a religious structure, the project aims to become a catalyst for community unification
+      and education. By integrating a library and reading room (Kiraethana) into the modest design, the mosque now
+      serves as a hub for knowledge exchange, fostering deeper social connections within the local community. If you
+      would like to contribute to the development of this complex, either by donation or by adding to the Kiraethana
+      collection, please contact us.
+    </p>
+  </section>
+
+  <section id="contact">
+    <div>
+      <p>
+        If you would like to contribute to the development of this complex, either by donation or by adding to the
+        Kiraethana collection, please contact us.
+      </p>
+      <ContactForm />
+    </div>
+  </section>
+
+  <footer></footer>
 </Layout>
+
+<style>
+  p {
+    font-size: 1.5rem;
+    white-space: balance;
+  }
+
+  section {
+    padding: 8rem;
+    text-align: center;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+
+  footer {
+    height: 100vh;
+  }
+</style>

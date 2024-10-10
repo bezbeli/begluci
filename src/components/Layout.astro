@@ -1,6 +1,7 @@
 ---
 import "../global.css"
 import { ViewTransitions } from "astro:transitions"
+import Navigation from "./Navigation.astro"
 ---
 
 <html lang="en">
@@ -14,6 +15,7 @@ import { ViewTransitions } from "astro:transitions"
     <ViewTransitions />
   </head>
   <body>
+    <Navigation />
     <slot />
   </body>
 </html>
