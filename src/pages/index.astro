@@ -5,6 +5,10 @@ import CarouselWrapper from "@/components/ui/CarouselWrapper.tsx"
 ---
 
 <Layout>
+  <section>
+    <img class="max-w-96" src="/images/icon.png" alt="" />
+  </section>
+
   <section id="about">
     <p>
       The Kiraethana Mosque complex (Beglučka Džamija) is located in the sparsely populated village of Begluci, Bosnia
@@ -26,8 +30,8 @@ import CarouselWrapper from "@/components/ui/CarouselWrapper.tsx"
     </p>
   </section>
 
-  <section id="gallery">
-    <CarouselWrapper client:load />
+  <section id="gallery" class="py-0 items-center">
+    <CarouselWrapper arrows client:load />
   </section>
 
   <section id="vision">
@@ -40,35 +44,14 @@ import CarouselWrapper from "@/components/ui/CarouselWrapper.tsx"
     </p>
   </section>
 
-  <section id="contact">
-    <div>
-      <p>
-        If you would like to contribute to the development of this complex, either by donation or by adding to the
-        Kiraethana collection, please contact us.
-      </p>
-      <ContactForm />
-    </div>
+  <section id="contact" class="items-center">
+    <ContactForm />
   </section>
 
   <footer></footer>
+
+  <div class="backdrop">
+    <div class="overlay"></div>
+    <CarouselWrapper fade client:load />
+  </div>
 </Layout>
-
-<style>
-  p {
-    font-size: 1.5rem;
-    white-space: balance;
-  }
-
-  section {
-    padding: 8rem;
-    text-align: center;
-    height: 100vh;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-  }
-
-  footer {
-    height: 100vh;
-  }
-</style>

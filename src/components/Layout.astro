@@ -1,7 +1,7 @@
 ---
 import "../global.css"
-import { ViewTransitions } from "astro:transitions"
 import Navigation from "./Navigation.astro"
+import ScrollToAnchor from "./ScrollToAnchor.astro"
 ---
 
 <html lang="en">
@@ -10,12 +10,11 @@ import Navigation from "./Navigation.astro"
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
-    <title>Begluci...ba</title>
-
-    <ViewTransitions />
+    <title>Begluci.ba</title>
   </head>
   <body>
     <Navigation />
     <slot />
+    <ScrollToAnchor />
   </body>
 </html>

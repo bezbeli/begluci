@@ -4,7 +4,7 @@ import { createTestAccount, createTransport, getTestMessageUrl } from "nodemaile
 import type { Transporter } from "nodemailer";
 
 type WelcomeEmailParams = { name: "welcome"; params: { name: string } };
-type CustomEmailParams = { name: "custom"; params: { html: string } };
+type CustomEmailParams = { name: "custom"; params: { name: string; html: string } };
 
 type TemplateParams = WelcomeEmailParams | CustomEmailParams;
 

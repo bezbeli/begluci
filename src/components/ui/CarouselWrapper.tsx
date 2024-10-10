@@ -3,8 +3,14 @@ import Fade from "embla-carousel-fade";
 import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
 
-const InteractiveCarousel = () => {
+interface InteractiveCarouselProps {
+  fade?: boolean;
+  arrows?: boolean;
+}
+
+const InteractiveCarousel: React.FC<InteractiveCarouselProps> = ({ fade, arrows }) => {
   const [images, setImages] = useState<string[]>([]);
+  const plugins = fade ? [Fade(), Autoplay({ delay: 5000 })] : [Autoplay({ delay: 3000 })];
 
   useEffect(() => {
     const imagePaths = Array.from({ length: 12 }, (_, i) => `/images/${i + 1}.jpg`);
@@ -12,10 +18,7 @@ const InteractiveCarousel = () => {
   }, []);
 
   return (
-    <Carousel
-      className="mb-12"
-      plugins={[Fade(), Autoplay({ delay: 3000, stopOnFocusIn: true, stopOnInteraction: false })]}
-    >
+    <Carousel className="slider" plugins={plugins} opts={{ loop: true }}>
       <CarouselContent>
         {images.map((image, index) => (
           <CarouselItem key={index}>
@@ -23,8 +26,12 @@ const InteractiveCarousel = () => {
           </CarouselItem>
         ))}
       </CarouselContent>
-      <CarouselPrevious />
-      <CarouselNext />
+      {arrows && (
+        <>
+          <CarouselPrevious className="bg-transparent text-white/70" variant={"outline"} />
+          <CarouselNext className="bg-transparent text-white/70" variant={"outline"} />
+        </>
+      )}
     </Carousel>
   );
 };

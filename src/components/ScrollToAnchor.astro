@@ -1,0 +1,25 @@
+---
+
+---
+
+<script>
+  document.addEventListener("DOMContentLoaded", () => {
+    const links = document.querySelectorAll('a[href^="#"]')
+
+    links.forEach((link) => {
+      link.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        const targetId = link.getAttribute("href")
+        const targetElement = targetId ? document.querySelector(targetId) : null
+
+        if (targetElement) {
+          targetElement.scrollIntoView({
+            behavior: "smooth",
+            block: "start",
+          })
+        }
+      })
+    })
+  })
+</script>

@@ -5,11 +5,18 @@ import Layout from "../components/Layout.astro"
 <Layout>
   <main class="max-w-screen-sm mx-auto text-center">
     <h1>Begluci.ba</h1>
-    <p class="text-2xl mb-3">Vaš email je uspješno poslan!</p>
-    <p>
-      <a class="px-8 py-2 border border-stone-400 uppercase text-xs rounded-full inline-block" href="/"
-        >Povratak na početnu stranicu &rarr;</a
-      >
-    </p>
+    <p>Vaš email je uspješno poslan!</p>
+    <p><a href="/">&larr;&nbsp;&nbsp;Povratak na početnu stranicu</a></p>
   </main>
 </Layout>
+
+<style>
+  p {
+    @apply text-2xl mb-3 text-black;
+  }
+
+  a {
+    @apply pl-6 pr-8 py-2 border border-stone-400 font-bold;
+    @apply uppercase text-xs rounded-full inline-block text-black;
+  }
+</style>
