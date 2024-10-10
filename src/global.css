@@ -73,9 +73,13 @@ p {
 }
 
 section {
-  @apply items-end justify-center flex p-8 md:p-[8rem] text-left md:text-center;
+  @apply items-center justify-end gap-8 flex-col flex p-8 md:p-[8rem] text-left md:text-center;
   @apply text-base md:text-lg md:leading-[1.75em];
   height: 100vh;
+
+  .next {
+    @apply text-white p-2 border border-white/50 rounded-full block;
+  }
 }
 
 .backdrop {
