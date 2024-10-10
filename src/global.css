@@ -16,11 +16,6 @@ h2 {
 }
 
 form {
-  /* @apply bg-black/30 rounded; */
-  display: flex;
-  flex-direction: column;
-  gap: 1rem;
-
   label {
     display: none;
   }
@@ -72,12 +67,21 @@ p {
   color: white;
 }
 
+main {
+  @apply h-[100vh] md:h-auto;
+  height: calc(var(--vh, 1vh) * 100);
+  @apply md:h-auto overflow-hidden md:overflow-visible;
+}
+
 section {
+  height: 100vh; /* Fallback for browsers that do not support Custom Properties */
+  height: calc(var(--vh, 1vh) * 100);
+
   @apply items-center justify-end gap-8 flex-col flex py-8 pl-4 pr-12 md:p-[8rem] text-left;
-  @apply text-base md:text-lg md:leading-[1.75em] h-screen;
+  @apply text-base md:text-lg md:leading-[1.75em];
 
   .next {
-    @apply text-white p-2 border-2 border-white/50 rounded-full block;
+    @apply text-white font-bold ml-8 md:ml-0 size-12 flex justify-center items-center border-2 border-white/50 rounded-full block;
   }
 }
 

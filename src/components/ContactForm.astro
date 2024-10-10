@@ -14,7 +14,7 @@
 
   <div class="flex md:flex-row justify-between gap-4">
     <label class="consent" for="send-email__consent">
-      <input class="size-8" type="checkbox" name="consent" id="send-email__consent" required />
+      <input class="size-6" type="checkbox" name="consent" id="send-email__consent" required />
       I agree www.begluci.ba will process my personal data for relationship records
     </label>
 
@@ -24,8 +24,7 @@
 
 <style>
   form {
-    @apply mx-auto max-w-xl flex flex-col gap-4 rounded-2xl;
-    @apply p-4 md:p-8;
+    @apply mx-auto max-w-xl flex flex-col gap-4;
   }
 
   p {
@@ -36,7 +35,7 @@
     color: white;
 
     &.consent {
-      @apply md:w-1/2 flex items-center justify-start text-left gap-2 leading-tight text-xs;
+      @apply text-balance md:w-1/2 flex items-center justify-start text-left gap-2 leading-tight text-xs;
     }
   }
 </style>
