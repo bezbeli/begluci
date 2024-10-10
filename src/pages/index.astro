@@ -1,6 +1,6 @@
 ---
-import Layout from "../components/Layout.astro"
-import CarouselWrapper from "../components/ui/CarouselWrapper.tsx"
+import Layout from "@/components/Layout.astro"
+import CarouselWrapper from "@/components/ui/CarouselWrapper.tsx"
 ---
 
 <Layout>
@@ -26,12 +26,4 @@ import CarouselWrapper from "../components/ui/CarouselWrapper.tsx"
       <input type="submit" value="Pošalji" />
     </form>
   </div>
-  <script>
-    var elem = document.querySelector(".carousel")
-    var flkty = new Flickity(elem, {
-      fade: true,
-      cellAlign: "left",
-      contain: true,
-    })
-  </script>
 </Layout>

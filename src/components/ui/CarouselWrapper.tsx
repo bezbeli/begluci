@@ -1,6 +1,6 @@
 import { Carousel, CarouselContent, CarouselItem, CarouselNext, CarouselPrevious } from "@/components/ui/carousel";
-import Fade from "node_modules/embla-carousel-fade";
-import Autoplay from "node_modules/embla-carousel-autoplay";
+import Fade from "embla-carousel-auto-scroll";
+import Autoplay from "embla-carousel-autoplay";
 import { useState, useEffect } from "react";
 
 const InteractiveCarousel = () => {
