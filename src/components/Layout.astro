@@ -1,5 +1,6 @@
 ---
 import "../global.css"
+import { ViewTransitions } from "astro:transitions"
 ---
 
 <html lang="en">
@@ -9,6 +10,8 @@ import "../global.css"
     <meta name="viewport" content="width=device-width" />
     <meta name="generator" content={Astro.generator} />
     <title>Begluci...ba</title>
+
+    <ViewTransitions />
   </head>
   <body>
     <slot />

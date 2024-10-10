@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 h1 {
   font-size: 1rem;
   text-transform: uppercase;
@@ -57,4 +61,10 @@ form {
 hr {
   margin: 2rem 0;
   display: block;
+}
+
+@layer base {
+  :root {
+    --radius: 0.5rem;
+  }
 }

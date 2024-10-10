@@ -12,13 +12,28 @@
   "dependencies": {
     "@astrojs/check": "^0.5.10",
     "@astrojs/netlify": "^5.2.0",
+    "@astrojs/react": "^3.6.2",
     "@astrojs/tailwind": "^5.1.1",
+    "@radix-ui/react-slot": "^1.1.0",
     "@types/ejs": "^3.1.5",
     "@types/nodemailer": "^6.4.14",
+    "@types/react": "^18.3.11",
+    "@types/react-dom": "^18.3.0",
     "astro": "^4.5.12",
+    "class-variance-authority": "^0.7.0",
+    "clsx": "^2.1.1",
     "ejs": "^3.1.9",
+    "embla-carousel-auto-scroll": "^8.3.0",
+    "embla-carousel-autoplay": "^8.3.0",
+    "embla-carousel-fade": "^8.3.0",
+    "embla-carousel-react": "^8.3.0",
+    "lucide-react": "^0.451.0",
     "nodemailer": "^6.9.13",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1",
+    "tailwind-merge": "^2.5.3",
     "tailwindcss": "^3.4.13",
+    "tailwindcss-animate": "^1.0.7",
     "typescript": "^5.4.3"
   }
 }

@@ -1,40 +1,37 @@
 ---
 import Layout from "../components/Layout.astro"
+import CarouselWrapper from "../components/ui/CarouselWrapper.tsx"
 ---
 
 <Layout>
   <h1>Begluci.ba</h1>
-  <div class="mx-auto max-w-screen-sm flex flex-col gap-4">
+
+  <CarouselWrapper client:load />
+
+  <div class="mx-auto max-w-lg flex flex-col gap-4">
     <form action="/actions/send-custom-email" method="post">
       <h2>Kontakt</h2>
       <div>
-        <label for="send-email__recipient">To:</label>
+        <label for="send-email__recipient">Za:</label>
         <input placeholder="Email" type="email" name="recipient" id="send-email__recipient" required />
       </div>
       <div>
-        <label for="send-email__subject">Subject:</label>
-        <input placeholder="Subject" type="text" name="subject" id="send-email__subject" required />
+        <label for="send-email__subject">Naslov:</label>
+        <input placeholder="Naslov" type="text" name="subject" id="send-email__subject" required />
       </div>
       <div>
-        <label for="send-email__message">Message:</label>
-        <textarea placeholder="Message" name="message" id="send-email__message" required></textarea>
-      </div>
-      <input type="submit" value="Pošalji" />
-    </form>
-
-    <hr class="hidden" />
-
-    <form class="hidden" action="/actions/send-welcome-email" method="post">
-      <h2>Welcome Email</h2>
-      <div>
-        <label for="send-email__recipient">To:</label>
-        <input placeholder="Email" type="email" name="recipient" id="send-email__recipient" required />
-      </div>
-      <div>
-        <label for="send-email__name">Name:</label>
-        <input placeholder="Name" type="text" name="name" id="send-email__name" required />
+        <label for="send-email__message">Poruka:</label>
+        <textarea placeholder="Poruka" name="message" id="send-email__message" required></textarea>
       </div>
       <input type="submit" value="Pošalji" />
     </form>
   </div>
+  <script>
+    var elem = document.querySelector(".carousel")
+    var flkty = new Flickity(elem, {
+      fade: true,
+      cellAlign: "left",
+      contain: true,
+    })
+  </script>
 </Layout>
