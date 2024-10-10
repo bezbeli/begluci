@@ -74,8 +74,7 @@ p {
 
 section {
   @apply items-center justify-end gap-8 flex-col flex py-8 pl-4 pr-12 md:p-[8rem] text-left;
-  @apply text-base md:text-lg md:leading-[1.75em];
-  height: 100vh;
+  @apply text-base md:text-lg md:leading-[1.75em] h-screen;
 
   .next {
     @apply text-white p-2 border-2 border-white/50 rounded-full block;
