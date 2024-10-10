@@ -6,6 +6,13 @@ import react from "@astrojs/react";
 
 // https://astro.build/config
 export default defineConfig({
+  vite: {
+    resolve: {
+      alias: {
+        '@': '/src',
+      },
+    },
+  },
   output: "hybrid",
   adapter: netlify(),
   integrations: [tailwind({
