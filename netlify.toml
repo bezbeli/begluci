@@ -2,5 +2,5 @@
   included_files = ["./src/utils/templates/**.ejs"]
 
 [template.environment]
-  RESEND_API_KEY = "change me to your Resend API key"
-  SEND_EMAIL_FROM = "MyApp <noreply@example.com>"
+  RESEND_API_KEY = "re_6SvdBr5k_6AL64pudcdWdBV3YdoF9vz48"
+  SEND_EMAIL_FROM = "Begluci <noreply@begluci.ba>"
