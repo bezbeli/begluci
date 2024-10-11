@@ -77,7 +77,7 @@ section {
   height: 100vh; /* Fallback for browsers that do not support Custom Properties */
   height: calc(var(--vh, 1vh) * 100);
 
-  @apply items-center justify-end gap-8 flex-col flex py-8 pl-4 pr-12 md:p-[8rem] text-center;
+  @apply items-center justify-end gap-8 flex-col flex py-8 pl-4 pr-12 md:p-[8rem] md:text-center;
   @apply text-base md:text-lg md:leading-[1.75em];
 
   .next {
