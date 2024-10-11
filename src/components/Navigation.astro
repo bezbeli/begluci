@@ -14,8 +14,8 @@
   ul {
     font-weight: bold;
     position: fixed;
-    bottom: 2rem;
-    right: 1rem;
+    bottom: 400px;
+    right: 2rem;
     display: flex;
     flex-direction: row;
     justify-content: space-around;
@@ -23,8 +23,12 @@
     padding: 0;
     gap: 0.75rem;
     color: white;
-    writing-mode: sideways-lr;
-    text-orientation: mixed;
+    /* writing-mode: vertical-rl; */
+    /* writing-mode: sideways-lr; */
+    /* text-orientation: mixed; */
+    /* rotate text 90 degrees */
+    transform: rotate(-90deg);
+    transform-origin: top right;
   }
 
   li {
