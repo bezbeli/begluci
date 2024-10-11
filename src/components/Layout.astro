@@ -9,8 +9,51 @@ import ScrollToAnchor from "./ScrollToAnchor.astro"
     <meta charset="utf-8" />
     <link rel="icon" type="image/svg+xml" href="/favicon.svg" />
     <meta name="viewport" content="width=device-width" />
-    <meta name="generator" content={Astro.generator} />
-    <title>Begluci.ba</title>
+
+    <title>Kiraethana Mosque Complex | Begluci, Bosnia and Herzegovina</title>
+    <meta
+      name="description"
+      content="Discover the rebuilt Kiraethana Mosque complex in Begluci, Bosnia and Herzegovina. A center for prayer, community events, and Bosnian diaspora connections."
+    />
+
+    <!-- Open Graph tags for social media sharing -->
+    <meta property="og:title" content="Kiraethana Mosque Complex (Beglučka Džamija)" />
+    <meta
+      property="og:description"
+      content="Explore the rebuilt Kiraethana Mosque in Begluci, Bosnia. A 200-year heritage site serving as a community center and diaspora connection point."
+    />
+    <meta property="og:image" content="https://begluci.ba/images/1.jpg" />
+    <meta property="og:url" content="https://begluci.ba" />
+    <meta property="og:type" content="website" />
+
+    <!-- Twitter Card tags -->
+    <meta name="twitter:card" content="summary_large_image" />
+    <meta name="twitter:title" content="Kiraethana Mosque Complex - Begluci, Bosnia" />
+    <meta
+      name="twitter:description"
+      content="Rebuilt mosque complex in Begluci, Bosnia. Community center for prayer, events, and diaspora connections."
+    />
+    <meta name="twitter:image" content="https://begluci.ba/images/1.jpg" />
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://begluci.ba" />
+
+    <!-- Structured Data (JSON-LD) -->
+    <script type="application/ld+json">
+      {
+        "@context": "https://schema.org",
+        "@type": "Place",
+        "name": "Kiraethana Mosque Complex",
+        "alternateName": "Beglučka Džamija",
+        "description": "A rebuilt mosque complex in Begluci, Bosnia and Herzegovina, serving as a community center for prayer, events, and diaspora connections.",
+        "address": {
+          "@type": "PostalAddress",
+          "addressLocality": "Begluci",
+          "addressCountry": "Bosnia and Herzegovina"
+        },
+        "url": "https://begluci.ba"
+      }
+    </script>
   </head>
   <body>
     <Navigation />
